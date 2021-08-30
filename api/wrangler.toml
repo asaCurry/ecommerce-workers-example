@@ -1,0 +1,8 @@
+name = "api"
+type = "webpack"
+
+account_id = "330fb33ee00efd54bd798046cfd60bbe"
+workers_dev = true
+webpack_config = "webpack.config.js"
+route = ""
+zone_id = ""
