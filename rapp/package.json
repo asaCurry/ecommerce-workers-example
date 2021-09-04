@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.3.4",
+    "next": "latest",
+    "next-sanity": "^0.4.0",
+    "postcss": "^8.3.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.39.0",
+    "serve": "11.2.0",
+    "tailwindcss": "^2.2.9"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
+  }
+}
