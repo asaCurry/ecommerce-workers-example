@@ -3,9 +3,10 @@
       "baseUrl": ".",
       "paths": {
         "@lib/*": [ "./lib/*"],
-        "@styles/*": ["./components/*"],
+        "@styles/*": ["./styles/*"],
         "@global/*": ["./components/global/*"],
-        "@layout/*": ["./components/layout/*"]
+        "@layout/*": ["./components/layout/*"],
+        "@store/*": ["./store/features/*"]
       }
     }
   }

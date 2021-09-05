@@ -1,6 +1,8 @@
 
 /* wrappers and layouts */
-
+body {
+    display: relative;
+}
 .inner-wrapper {
     max-width: 1024px;
     @apply m-auto

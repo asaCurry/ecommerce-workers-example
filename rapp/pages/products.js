@@ -17,8 +17,6 @@ import Product from '../components/product';
 export default function Post(props) {
     const { postdata, preview } = props;
 
-    const activePost = useSelector((state) => JSON.stringify(state.modal.product))
-
     const router = useRouter();
 
     const { data: posts } = usePreviewSubscription(query, {
@@ -36,9 +34,6 @@ export default function Post(props) {
                     posts.map((post, postInd) => (
                         <Product product={post} productInd={postInd} key={postInd} />
                     ))}
-                <div>
-                    {activePost}
-                </div>
             </div>
         </>
     );
