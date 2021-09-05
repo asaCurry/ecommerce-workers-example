@@ -4,19 +4,20 @@ import { useRouter } from "next/router";
 import client, {
     getClient,
     usePreviewSubscription,
-    PortableText,
 } from "@lib/sanity";
 
 import { groq } from "next-sanity";
 
-// styles
-import styles from '@styles/index.module.scss';
+// redux 
+import { useSelector } from 'react-redux'
 
 //components
 import Product from '../components/product';
 
 export default function Post(props) {
     const { postdata, preview } = props;
+
+    const activePost = useSelector((state) => JSON.stringify(state.modal.product))
 
     const router = useRouter();
 
@@ -33,8 +34,11 @@ export default function Post(props) {
             <div className="inner-wrapper grid grid-cols-3 gap-6 auto-rows-min">
                 {posts &&
                     posts.map((post, postInd) => (
-                        <Product product={post} productInd={postInd} />
+                        <Product product={post} productInd={postInd} key={postInd} />
                     ))}
+                <div>
+                    {activePost}
+                </div>
             </div>
         </>
     );
@@ -50,6 +54,6 @@ export async function getStaticProps({ params, preview = false }) {
             postdata: post,
             preview,
         },
-        revalidate: 10,
+        revalidate: 10
     };
 }
