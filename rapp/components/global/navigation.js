@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import { selectCartCount } from '@store/cart/cartSlice'
 
 const navItems = [
     {
@@ -17,7 +18,8 @@ const navItems = [
 
 export default function Navigation() {
 
-    const cart = useSelector((store) => store.cart.currentCart)
+    const cartCount = useSelector(selectCartCount)
+    console.log(cartCount)
 
     return (
         <div className="flex items-center justify-center">
@@ -27,6 +29,8 @@ export default function Navigation() {
                                 <a href={item.slug}>{item.name}</a>
                             </div>
                 })}
+                { cartCount > 0 && <div>{ cartCount} </div> }
+                
             </div>
         </div>
     )

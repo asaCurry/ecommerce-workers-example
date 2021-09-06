@@ -38,4 +38,9 @@ export const cartSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { addItem, removeItem } = cartSlice.actions
 
+export const selectCartCount = (state) => {
+  return state.cart.currentCart &&   
+    Object.values(state.cart.currentCart).reduce((a, {quantity}) => a + quantity, 0)
+}
 export default cartSlice.reducer
+

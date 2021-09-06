@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { urlFor, PortableText } from "@lib/sanity";
 import { modalHide } from '@store/modal/modalSlice'
-import { addItem } from '@store/cart/cartSlice'
+import { addItem, selectCartCount } from '@store/cart/cartSlice'
 
 
 export default function Modal() {
@@ -9,7 +9,6 @@ export default function Modal() {
     const product = useSelector((state) => state.modal.product)
     const { title } = product;
     const prodImg = product.defaultProductVariant.images[0];
-
     const dispatch = useDispatch()
 
     const handleOutSideClick = (e) => {
