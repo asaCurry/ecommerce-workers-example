@@ -8,8 +8,6 @@ import client, {
 
 import { groq } from "next-sanity";
 
-import styles from '@styles/index.module.scss';
-
 export default function Post(props) {
   const { postdata, preview } = props;
 
@@ -28,7 +26,7 @@ export default function Post(props) {
       <div>
         {posts &&
           posts.map((post,postInd) => (
-            <article className={styles.glass} key={postInd}>
+            <article className="glass" key={postInd}>
               <h3 className="text-lg"> {post.title} </h3>
               <p className="mt-3">{post.excerpt}</p>
             </article>
