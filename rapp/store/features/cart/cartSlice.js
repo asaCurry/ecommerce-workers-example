@@ -16,7 +16,10 @@ export const cartSlice = createSlice({
         state.currentCart[_id].quantity++
       } else {
         const productData = {
-          'quantity': 1
+          'quantity': 1,
+          'name':item.title,
+          'desc':item.blurb.en,
+          'imgRef':item.defaultProductVariant.images[0]
         }
 
         state.currentCart[_id] = productData;

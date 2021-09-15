@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { selectCartCount } from '@store/cart/cartSlice'
+import Link from 'next/link'
 
 const navItems = [
     {
@@ -13,6 +14,10 @@ const navItems = [
     {
         name: 'Get in Touch',
         slug: 'contact'
+    },
+    {
+        name: 'Cart',
+        slug: 'cart'
     }
 ]
 
@@ -25,7 +30,9 @@ export default function Navigation() {
             <div className="inner-wrapper flex flex-row items-center justify-center py-12">
                 {navItems.map((item, itemInd) => {
                     return <div className="text-accentone px-4 font-medium" key={itemInd}>
-                                <a href={item.slug}>{item.name}</a>
+                                <Link href={item.slug}>
+                                    <a >{item.name}</a>
+                                </Link>
                             </div>
                 })}
                 { cartCount > 0 && <div>{ cartCount} </div> }
