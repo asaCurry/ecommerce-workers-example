@@ -14,10 +14,6 @@ const navItems = [
     {
         name: 'Get in Touch',
         slug: 'contact'
-    },
-    {
-        name: 'Cart',
-        slug: 'cart'
     }
 ]
 
@@ -27,17 +23,23 @@ export default function Navigation() {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="inner-wrapper flex flex-row items-center justify-center py-12">
+            <div className="inner-wrapper flex flex-row items-center justify-center py-12 highlight-underline">
                 {navItems.map((item, itemInd) => {
-                    return <div className="text-accentone px-4 font-medium" key={itemInd}>
+                    return <div className="text-white px-4 text-lg font-display" key={itemInd}>
                                 <Link href={item.slug}>
                                     <a >{item.name}</a>
                                 </Link>
                             </div>
                 })}
-                { cartCount > 0 && <div>{ cartCount} </div> }
+                <Link href="/cart">
+                    <a className="relative">
+                        <i className="fas fa-shopping-cart text-white text-2xl w-8 h-8"></i>
+                        { cartCount > 0  && <div className="absolute bottom-0 -right-1.5 text-white bg-white bg-opacity-40 rounded-full text-center bg-highlightone flex justify-center text-sm items-center h-4 w-4">{cartCount}</div>  }
+                    </a>
+                </Link>
                 
             </div>
+            <div className="highlight-underline"></div>
         </div>
     )
 }

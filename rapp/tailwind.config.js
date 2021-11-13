@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         accentone: '#453F9C',
         accenttwo: '#6A19A9',
+        lavendar: '#D0CFE6',
          //  _accent-grad: linear-gradient(to right,rgba(33, 63, 171,1),rgba(106, 25, 169, 1)),
         highlightone: '#FF8A17',
         highlighttwo: '#FF3217',

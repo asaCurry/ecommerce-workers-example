@@ -8,8 +8,8 @@ export default function Cart(){
 
         return (
             <div className="">
-                <div className="inner-wrapper flex flex-col justify-center items-center">    
-                    {
+                <div className="inner-wrapper flex flex-col justify-start items-center py-8 min-h-screen">    
+                    {Object.keys(selectCartItems).length > 0 ?
                         Object.keys(selectCartItems).map((item, itemInd) => {
                             const {quantity, name, desc, imgRef} = selectCartItems[item];
 
@@ -25,7 +25,8 @@ export default function Cart(){
                                     </figure>
                                 </div>    
                             )
-                        })
+                        }) 
+                        : <div className="font-bold pt-24 text-accenttwo"> Your cart is empty,<br />do more shopping!</div>
                     }
                 </div>
             </div>

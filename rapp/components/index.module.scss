@@ -12,3 +12,12 @@
 .glass.opaque {
     background: radial-gradient(rgba(255, 255, 255, .80) 60%,rgba(255, 255, 255, .90) 100% ) ;        
 }
+
+/* gradients */
+._accent-grad {
+    background: linear-gradient(to right,rgba(33, 63, 171,1),rgba(106, 25, 169, 1));
+}
+
+._hightlight-grad {
+    background: linear-gradient(to right, rgba(255,138,23,1),rgba(255, 50, 23,1));
+}

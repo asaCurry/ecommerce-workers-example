@@ -1,11 +1,25 @@
 
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
+
+/* variables */
+:root {
+    --highlight-grad: linear-gradient(to right, rgba(255,138,23,1),rgba(255, 50, 23,1));
+}
+
+/* typography */
+
+h1,h2,h3,h4,h5,h6 {
+    @apply font-display tracking-wide
+}
 /* wrappers and layouts */
 body {
     display: relative;
 }
 .inner-wrapper {
     max-width: 1024px;
-    @apply m-auto
+    @apply mx-auto
 }
 
 /* theme classes */
@@ -24,3 +38,28 @@ body {
 .glass.opaque {
     background: radial-gradient(rgba(255, 255, 255, .80) 60%,rgba(255, 255, 255, .90) 100% ) ;        
 }
+
+.highlight-underline {
+    position: relative;
+}
+
+.highlight-underline:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 3px;
+    background: var(--highlight-grad);
+}
+/* hero */
+
+.hero-outer-wrapper {
+    background: linear-gradient(to right,rgba(33, 63, 171,.4),rgba(106, 25, 169, .4)), url("../public/images/marble_background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
