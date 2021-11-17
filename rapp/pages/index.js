@@ -26,10 +26,13 @@ export default function Post(props) {
     return (
         <>
             <Head>
-                <title>View All</title>
+                <title>Asa Curry</title>
                 <meta property="og:title" content="My page title" key="title" />
             </Head>
-            <div className="inner-wrapper grid grid-cols-3 gap-6 auto-rows-min mt-12">
+            <div className="inner-wrapper flex items-center justify-center pt-16 pb-8">
+                <h1 className="highlight-underline text-center text-slate">Example Products</h1>
+            </div>
+            <div className="inner-wrapper grid grid-cols-1 t:grid-cols-3 gap-6 auto-rows-min mt-12">
                 {posts &&
                     posts.map((post, postInd) => (
                         <Product product={post} productInd={postInd} key={postInd} />

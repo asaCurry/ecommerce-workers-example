@@ -9,12 +9,17 @@ const navItems = [
     },
     {
         name: 'About Me',
-        slug: 'about-me'
+        slug: '/about-me'
+    },
+    {
+        name:'Projects',
+        slug: '/projects'
     },
     {
         name: 'Get in Touch',
-        slug: 'contact'
-    }
+        slug: '/contact'
+    },
+
 ]
 
 export default function Navigation() {
@@ -23,9 +28,9 @@ export default function Navigation() {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="inner-wrapper flex flex-row items-center justify-center py-12 highlight-underline">
+            <div className="inner-wrapper flex flex-row flex-wrap items-center justify-center py-12 highlight-underline">
                 {navItems.map((item, itemInd) => {
-                    return <div className="text-white px-4 text-lg font-display" key={itemInd}>
+                    return <div className="text-white py-2 t:py-0 px-4 text-lg font-display" key={itemInd}>
                                 <Link href={item.slug}>
                                     <a >{item.name}</a>
                                 </Link>

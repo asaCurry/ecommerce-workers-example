@@ -8,7 +8,15 @@ module.exports = {
      },
     extend: {
       screens: {
-        'full': '1440px'
+        's': '640px',
+        // 'md': '768px',
+        't-max': {'min': '0', 'max': '799px'},
+        't': '800px', // keep as pixel values
+        // 'lg': '1024px',
+        'd': '1024px', // keep as pixel values
+        // 'xl': '1280px',
+        'full': '1440px', // keep as pixel values
+        // 'super': '2560px', // keep as pixel values // Kludge in layout
       },
       colors: {
         accentone: '#453F9C',
@@ -22,6 +30,9 @@ module.exports = {
   
         // ...
       },
+      minHeight: {
+        '96': '24rem',
+      }
     },
   },
   variants: {

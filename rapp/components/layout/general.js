@@ -2,10 +2,12 @@ import Head from 'next/head'
 import { useSelector } from 'react-redux'
 import Footer from '@global/footer'
 import Modal from '../modal'
+import ProjectModal from '../projectModal'
 import Hero from '../hero'
 
 export default function Layout({ children }) {
   const showModal = useSelector((state) => state.modal.show)
+  const showProjectModal = useSelector((state) => state.projectModal.show )
 
   return (
     <>
@@ -18,6 +20,7 @@ export default function Layout({ children }) {
       <Hero />
         <main>{children}</main>
         { showModal && <Modal /> }
+        { showProjectModal && <ProjectModal /> }
       <Footer />
     </>
   )
