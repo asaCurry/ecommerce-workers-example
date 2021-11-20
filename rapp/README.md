@@ -19,3 +19,13 @@ npx create-next-app --example with-static-export with-static-export-app
 # or
 yarn create next-app --example with-static-export with-static-export-app
 ```
+
+
+# Cloudflare Workers
+
+This project uses Cloudflare's integrated worker functionality with pages. In the root directory run:
+
+```
+npx wrangler pages dev ./functions
+```
+To mount the dev environment for workers

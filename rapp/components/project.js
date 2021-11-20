@@ -16,9 +16,9 @@ export default function Project({ project, projectInd }) {
 
     return (
         <>
-            <div className="project justify-self-center self-center relative col-span-1 p-8 bg-center bg-cover bg-top " style={{ backgroundImage: `url("${urlFor(prodImg).url()}")` }}>
+            <div onClick={handleProjectClick} className="project justify-self-center self-center relative col-span-1 p-8 bg-center bg-cover bg-top " style={{ backgroundImage: `url("${urlFor(prodImg).url()}")` }}>
                 <div className="project-overlay" style={{ background: `${color}` }}></div>
-                <article className="py-4  h-full flex items-center justify-center" key={projectInd} onClick={handleProjectClick}>
+                <article className="py-4  h-full flex items-center justify-center" key={projectInd} >
                     <h3 className="text-center relative z-10 text-white font-bold text-3xl flex items-center"> {title} </h3>
                 </article>
             </div>

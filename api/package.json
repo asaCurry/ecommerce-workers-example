@@ -20,5 +20,8 @@
     "webpack": "^5.50.0",
     "webpack-cli": "^4.8.0",
     "workers-preview": "^1.0.6"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "github:cloudflare/kv-asset-handler"
   }
 }
