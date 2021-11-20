@@ -15,10 +15,10 @@ export default function Cart(){
 
                             return (
                                 <div className="flex min-w-lg w-3/4 glass justify-between p-8 my-8" id={item} key={itemInd}>
-                                    <div >
-                                        <h3>{name}</h3>
-                                        <p>{desc}</p>
-                                        <span>{quantity}</span>
+                                    <div className="flex flex-col justify-between">
+                                        <h3 className="text-2xl" >{name}</h3>
+                                        <p className="text-2xl" >{desc}</p>
+                                        <span className="text-2xl mt-auto">Quantity: {quantity}</span>
                                     </div>    
                                     <figure>
                                         <img src={urlFor(imgRef).url()} className="object-contain h-48 w-full pt-4" />

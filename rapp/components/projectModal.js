@@ -21,11 +21,20 @@ export default function ProjectModal() {
                     <div onClick={() => dispatch(projectModalHide())} className=" text-24 absolute top-8 right-8 cursor-pointer"><i className="fas fa-times-circle text-accentone"></i></div>
                     <div className="flex flex-col justify-center items-top h-full">
                         <div className="summary py-4">
-                            <h2 className="text-center font-bold mb-4">{title}</h2>
+                            <h2 className="highlight-underline text-center font-bold mb-4">{title}</h2>
                             <PortableText blocks={project.description[0].children[0].text} />
-                            <figure>
-                                <img src={urlFor(prodImg).url()} className="object-contain h-56 w-full pt-4" />
-                            </figure>
+                            <div className="flex pt-8 flex-col t:flex-row items-start justify-between">
+                                <figure class="w-full t:w-half">
+                                    <img src={urlFor(prodImg).url()} className="object-contain h-full max-h-96 w-full pt-4" />
+                                </figure>
+                                <div class="w-full t:w-half px-4">
+                                    <PortableText blocks={project.description[0]} />
+                                    {
+                                        console.log(project.description[0])
+                                    }
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
